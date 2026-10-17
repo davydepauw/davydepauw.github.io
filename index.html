@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script>document.documentElement.classList.add("js")</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#0c1a1d">
+    <meta
+      name="description"
+      content="Public projects by Davy De Pauw: fresh-mac, Nara for iTerm and VS Code, and front-end agent skills."
+    >
+    <meta property="og:title" content="Davy De Pauw — public projects">
+    <meta
+      property="og:description"
+      content="A terminal index of public projects: a Mac setup script, Nara color themes, and front-end agent skills."
+    >
+    <meta property="og:type" content="website">
+    <title>Davy De Pauw — public projects</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="projects.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#projects">Skip to projects</a>
+    <main class="page">
+      <div class="desktop">
+        <div class="terminal is-booting" id="terminal">
+        <div class="chrome">
+          <span class="dots">
+            <button type="button" class="dot dot-rose" id="close-terminal" aria-controls="terminal" aria-label="Close window">
+              <span class="dot-glyph" aria-hidden="true">×</span>
+            </button>
+            <i class="dot dot-gold" aria-hidden="true"></i>
+            <button type="button" class="dot dot-teal" id="maximize-terminal" aria-controls="terminal" aria-pressed="false" aria-label="Maximize window">
+              <span class="dot-glyph" aria-hidden="true">+</span>
+            </button>
+          </span>
+          <p class="chrome-title" translate="no">davydepauw@github:~/public</p>
+          <span class="chrome-balance" aria-hidden="true"></span>
+        </div>
+
+        <div class="session">
+          <h1 class="boot-step">
+            <span class="visually-hidden">Davy De Pauw</span>
+            <span class="logo-wrap">
+              <pre class="logo" aria-hidden="true" translate="no">██████╗  █████╗ ██╗   ██╗██╗   ██╗
+██╔══██╗██╔══██╗██║   ██║╚██╗ ██╔╝
+██║  ██║███████║██║   ██║ ╚████╔╝
+██║  ██║██╔══██║╚██╗ ██╔╝  ╚██╔╝
+██████╔╝██║  ██║ ╚████╔╝    ██║
+╚═════╝ ╚═╝  ╚═╝  ╚═══╝     ╚═╝
+
+██████╗ ███████╗    ██████╗  █████╗ ██╗   ██╗██╗    ██╗
+██╔══██╗██╔════╝    ██╔══██╗██╔══██╗██║   ██║██║    ██║
+██║  ██║█████╗      ██████╔╝███████║██║   ██║██║ █╗ ██║
+██║  ██║██╔══╝      ██╔═══╝ ██╔══██║██║   ██║██║███╗██║
+██████╔╝███████╗    ██║     ██║  ██║╚██████╔╝╚███╔███╔╝
+╚═════╝ ╚══════╝    ╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚══╝╚══╝</pre>
+            </span>
+          </h1>
+
+          <p class="line boot-step" data-boot="whoami" translate="no">
+            <span class="prompt"><span class="user">davydepauw</span>@<span class="host">github</span>:<span class="directory">~</span>$</span>
+            <span class="command">whoami</span>
+          </p>
+          <p class="intro boot-step">
+            Front-end developer at <a href="https://www.iodigital.com/">iO</a>, in Ghent.
+          </p>
+          <ul class="links boot-step" id="link-list" aria-busy="true"></ul>
+
+          <section id="projects" aria-labelledby="projects-heading">
+            <h2 class="visually-hidden" id="projects-heading">Public projects</h2>
+            <p class="line boot-step" data-boot="ls" aria-hidden="true" translate="no">
+              <span class="prompt"><span class="user">davydepauw</span>@<span class="host">github</span>:<span class="directory">~</span>$</span>
+              <span class="command">ls public</span>
+            </p>
+            <ul class="projects boot-step" id="project-list" aria-busy="true"></ul>
+            <noscript>
+              <p class="projects-error">Enable JavaScript to see the lists on this page.</p>
+            </noscript>
+          </section>
+
+          <p class="line idle boot-step" translate="no">
+            <span class="prompt"><span class="user">davydepauw</span>@<span class="host">github</span>:<span class="directory">~</span>$</span>
+            <span class="cursor" aria-hidden="true"></span>
+          </p>
+          <p class="status boot-step" id="project-status">Ghent, Belgium</p>
+        </div>
+        </div>
+        <button type="button" class="desktop-icon" id="open-terminal" hidden>
+          <img src="favicon.svg" alt="" width="68" height="68">
+          <span class="desktop-icon-label"><span class="visually-hidden">Open </span>~/public</span>
+        </button>
+      </div>
+      <p class="colophon">
+        Palette from <a href="https://github.com/davydepauw/nara-vscode">Nara</a>.
+      </p>
+    </main>
+    <script type="application/json" id="links-data">
+      [
+        {
+          "label": "github.com/davydepauw",
+          "url": "https://github.com/davydepauw"
+        },
+        {
+          "label": "davydepauw.social",
+          "url": "https://davydepauw.social"
+        },
+        {
+          "label": "davydepauw.be",
+          "url": "https://davydepauw.be"
+        },
+        {
+          "label": "lievegroentjes.be",
+          "url": "https://lievegroentjes.be"
+        }
+      ]
+    </script>
+    <script type="application/json" id="projects-data">
+      [
+        {
+          "name": "fresh-mac",
+          "url": "https://github.com/davydepauw/fresh-mac",
+          "kind": "shell",
+          "description": "One script for a new Mac: Homebrew, git, zsh dotfiles, and a short list of macOS settings."
+        },
+        {
+          "name": "nara-vscode",
+          "url": "https://github.com/davydepauw/nara-vscode",
+          "kind": "theme",
+          "description": "The same Nara palette, for VS Code and Cursor."
+        },
+        {
+          "name": "nara-iterm",
+          "url": "https://github.com/davydepauw/nara-iterm",
+          "kind": "theme",
+          "description": "Cool dark color theme for iTerm2. Pond-stone blue-grey, sea-foam teal, and lantern gold."
+        },
+        {
+          "name": "frontend-skills",
+          "url": "https://github.com/davydepauw/frontend-skills",
+          "kind": "skills",
+          "description": "Agent skills for stylesheets and front-end architecture, starting with css-expert."
+        }
+      ]
+    </script>
+  </body>
+</html>
